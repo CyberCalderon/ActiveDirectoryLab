@@ -20,8 +20,18 @@ In this lab we're going to walk through how to create an Active Directory Home L
 <h2>Program walk-through:</h2>
 
 <p align="center">
-Launch the utility: 
-
+Active Directory Network Diagram:
+<img src=https://i.imgur.com/T0vWgC3.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+<br />
+<br />
+Download Oracle VN Virtualbox with extension pack:
+https://www.virtualbox.org/wiki/Downloads
+<img src=https://imgur.com/MVgav8K.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+<br />
+<br />
+Download Windows 10 ISO and Windows Server 2019 ISO:
+https://www.microsoft.com/en-us/software-download/windows10ISO
+https://www.microsoft.com/en-us/evalcenter/download-windows-server-2019
 
 
 
