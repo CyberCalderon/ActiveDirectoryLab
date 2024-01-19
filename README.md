@@ -75,7 +75,24 @@ Under file explorer click this pc, then click virtualbox guest addition, then ru
 <img src=https://imgur.com/ASFqsVo.png" height="80%" width="80%"
 <br />
 <br />
-
+Click network, change adapter options, rename the networks, Internet (click status and see which network has an ipv4 address to find out which is connected to internet), and Internal: <br/>
+<img src=https://imgur.com/6GhHZpk.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+ <img src=https://imgur.com/7zA4zAk.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+ <img src=https://imgur.com/AAtnU9l.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+<br />
+<br />
+Under Internal network properties click internet protocol version 4 and assign the ip address 172.16.0.1 with subnet mask of 255.255.0.0 and use lookback address of dns server 127.0.0.1:  <br/>
+<img src=https://imgur.com/Tuxi5Zs.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+<br />
+<br />
+ Right click start menu, go to system, rename this pc to DC:  <br/>
+<img src=https://imgur.com/Zuf5Khx.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+<br />
+<br />
+Right click start menu, go to system, rename this pc to DC then reboot:  <br/>
+<img src=https://imgur.com/Zuf5Khx.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+<br />
+<br />
 
 
  
