@@ -93,8 +93,90 @@ Right click start menu, go to system, rename this pc to DC then reboot:  <br/>
 <img src=https://imgur.com/Zuf5Khx.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
 <br />
 <br />
-
-
+Add domain service, click add roles and features and press next until the active directory domain services checkbox becomes available, click on it and add feature, install:  <br/>
+<img src=https://imgur.com/sdUGJ0b.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+<img src=https://imgur.com/pugZoQU.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+<br />
+<br />
+Promote this server to domain controller, add new forest named mydomain.com press next and make up simple password like Password1, keep pressing next until install, reboot:  <br/>
+<img src=https://imgur.com/0yyUpG0.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+<img src=https://imgur.com/iOmYuoq.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+<br />
+<br />
+Under start menu click on active directory users and computers, right click mydomain.com, click new, then organizational unit for admin accounts, name it _ADMINS uncheck prevent accidental deletion:  <br/>
+<img src=https://imgur.com/Fi1gEiE.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+<img src=https://imgur.com/Cq243CN.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+<br />
+<br />
+Create new admin user acccount under _ADMINS organizational Unit use Password1 as password and check password never expires for this lab:  <br/>
+<img src=https://imgur.com/7K3RGUC.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+<br />
+<br />
+Right click on new user and click properties, go to member of tab, press add, type in domain admins and resolve name press apply and ok:  <br/>
+<img src=https://imgur.com/tQxb8QX.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+<br />
+<br />
+Sign out, and log in to new admin account using your name you created. Mine was a-ncalderon:  <br/>
+<img src=https://imgur.com/ktJypmN.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+<br />
+<br />
+Going to install RAS/NAT next for remote access, allowing server to be on virtual private network but still access internet through domain controller:  <br/>
+ <img src=https://imgur.com/9XsA7RT.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+<br />
+<br />
+On server manager, add roles and features again, but check the box remote access instead, press next and then check the routing box, next until install:  <br/>
+ <img src=https://imgur.com/d7CfF82.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+<br />
+<br />
+Top right of server manager is an option for tools, click the drop down menu and find routing and remote access option:  <br/>
+ <img src=https://imgur.com/9XsA7RT.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+<br />
+<br />
+Right click DC and configure routing and remote access, click the NAT network option, click the internet interface and click next then finish:  <br/>
+ <img src=https://imgur.com/ZMvkoy7.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+ <img src=https://imgur.com/Bw1sgIv.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+ <img src=https://imgur.com/KiH7KXA.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+<br />
+<br />
+Add roles and features again, click dhcp role next and install:  <br/>
+ <img src=https://imgur.com/K9h6QsK.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+<br />
+<br />
+Click tools drop down on server manager and find dhcp, create new scope by right clicking ipv4, name the scope our range of 172.16.0.100-200, press next, set start ip as 172.16.0.100 end as 172.16.0.200, length as 24 and press next until router(default gateway) screen, type the domain controller's ip address of 172.16.0.1 and press add click next until finish:  <br/>
+ <img src=https://imgur.com/YfQ4jG0.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+ <img src=https://imgur.com/XMnHqfi.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+<br />
+<br />
+ Right click mydomain.com folder, click authorize and refresh:  <br/>
+ <img src=https://imgur.com/xVpAsj7.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+<br />
+<br />
+Open new user powershell script to create 1000 users, paste link to internet explorer sacve as, put on desktop, extract file: <br/>
+ https://github.com/joshmadakor1/AD_PS/archive/master.zip <br/>
+ <img src=https://imgur.com/ahIHJf9.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+<br />
+<br />
+Open names file from the script file, add your name on top of the list of names, save file
+<br />
+<br />
+Run powershell ISE run as admin:  <br/>
+ <img src=https://imgur.com/1hfssaK.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+<br />
+<br />
+Click open, find the create_users file from the AD_PS-master folder, open script:  <br/>
+ <img src=https://imgur.com/ut4Vbi0.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+<br />
+<br />
+In the command prompt type "Set_ExecutionPolicy unrestricted" yes to all <br />
+ <br />
+:  <br/>
+ <img src=https://imgur.com/1hfssaK.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+<br />
+<br />
+Navigate to the directory of AD_PS-master file by typing in the command line "cd C:\users\a-ncalderon\desktop\ad_PS-master", substituting your username instead, click play on script to create all the accounts.
+<img src=https://imgur.com/7fm7bY9.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+<br />
+<br />
  
 <!--
  ```diff
