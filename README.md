@@ -1,6 +1,7 @@
 <h1>Active Directory Home Lab</h1>
 
- ### [YouTube Demonstration](https://youtu.be/7eJexJVCqJo)
+  <!--### [YouTube Demonstration](https://youtu.be/7eJexJVCqJo)
+--!>
 
 <h2>Description</h2>
 In this lab we're going to walk through how to create an Active Directory Home Lab Environment using Oracle Virtual Box. Configuring and running this lab will definitely help your understanding of how active directory and windows networking works, so i'd recommend running through it a couple times, ask questions where stuff is unclear and eventually try to build it on your own without watching. Please let me know if you have any questions.
@@ -173,12 +174,47 @@ In the command prompt type "Set_ExecutionPolicy unrestricted" yes to all <br />
  <img src=https://imgur.com/1hfssaK.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
 <br />
 <br />
-Navigate to the directory of AD_PS-master file by typing in the command line "cd C:\users\a-ncalderon\desktop\ad_PS-master", substituting your username instead, click play on script to create all the accounts.
+Navigate to the directory of AD_PS-master file by typing in the command line "cd C:\users\a-ncalderon\desktop\ad_PS-master", substituting your username instead, click play on script to create all the accounts: <br/>
 <img src=https://imgur.com/7fm7bY9.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
 <br />
 <br />
+Create the client Windows 10 virtual machine with virtualbox, allocate at least 2 processor cores, and 2 gigs of RAM, set clipboard and drag n drop to bidirectional like last VM: <br/>
+<img src=https://imgur.com/ycOBEnL.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+<br />
+<br />
+Set network tab to internal network as adapter 1: <br />
+ <img src=https://imgur.com/kWp0YLG.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+<br />
+<br />
+ Open Client VM, start with windows 10 ISO, join with windows 10 pro, custom install: <br />
+<img src=https://imgur.com/oUTW5qy.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+<br />
+<br />
+:
+<img src=https://imgur.com/oUTW5qy.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+<br />
+<br />
+ Log on to windows 10 VM, open cmd, type ipconfig, if you have a default gateway, it worked! <br />
+<img src=https://imgur.com/Gbo4V3b.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+<br />
+<br />
+ : <br />
+<img src=https://imgur.com/Gbo4V3b.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+<br />
+<br />
+type ping google.com in CMD, if it works then DNS server is working <br />
+<br />
+Right click start menu and go to system, scroll down, click rename this pc advanced: <br />
+<img src=https://imgur.com/mI5e6PH.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+<br />
+<br />
+Click change and rename to CLIENT1, type in domain of mydomain.com to join the domain at same time: <br />
+<img src=https://imgur.com/CVMccn1.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
+ <br />
+ <br />
+ DONE!! You created a fully functional active directory server, essentially a basic mini corporate network.
  
-<!--
+ <!--
  ```diff
 - text in red
 + text in green
