@@ -86,10 +86,6 @@ Under Internal network properties click internet protocol version 4 and assign t
 <img src=https://imgur.com/Tuxi5Zs.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
 <br />
 <br />
- Right click start menu, go to system, rename this pc to DC:  <br/>
-<img src=https://imgur.com/Zuf5Khx.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
-<br />
-<br />
 Right click start menu, go to system, rename this pc to DC then reboot:  <br/>
 <img src=https://imgur.com/Zuf5Khx.png" height="80%" width="80%" alt="Active Directory Home Lab steps"/>
 <br />
